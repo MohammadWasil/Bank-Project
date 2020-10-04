@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Bank note authentication</title>
+</head>
+
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<form action= "/predict_html" method="post">
+	<label for="fname"> Variance: </label><br>
+	<input type="text" id="variance" name="variance"><br>
+	
+	<label for="lname"> skewness: </label><br>
+	<input type="text" id="skewness" name="skewness"><br>
+	
+	<label for="lname"> curtosis: </label><br>
+	<input type="text" id="curtosis" name="curtosis"><br>
+	
+	<label for="lname"> entropy: </label><br>
+	<input type="text" id="entropy" name="entropy"><br>
+	
+	<input type="submit">
+</form>
+
+<br>
+<p>Or you can upload file</p>
+<form action= "/predict_html_file" method="post" enctype="multipart/form-data">
+  
+  <br><input type="file" name="file">
+  <input     type="submit">
+</form>
+
+</body>
+
+</html>
