@@ -1,0 +1,84 @@
+SNo,Date,Place,Item,Amount,Total
+1,2020-01-01,Netto,"apple juice, roma pudding, pizza, finton doppelkeks",0.79+0.25+0.35+0.79+0.99,3.17
+2,2020-01-08,Netto,"oil, kechup, pizza, bread, pyaaz",0.99+1.29+0.79+0.59+0.69,4.35
+3,2020-01-11,Netto,"Margherita Pizza, Pepsi, Banana",0.79+0.95+0.25+0.94,2.93
+4,2020-01-14,Netto,"Water, pizza, eggs, mozzarella cheese",0.19+0.25+0.79+1.43+1.40,4.06
+5,2020-01-22,Netto,"Apple juice, 2 kubza",0.79+0.25+0.32,1.36
+6,2020-01-23,Netto,"Pizza, eggs, FA Men Ocean(Face Wash)",0.79+1.55+1.99,4.33
+7,2020-01-14,Amazon,CFL Light bulb,5.27,5.27
+8,2020-01-24,Eurogida,"Chicken, Keema, brot",6.45+1.88+1.79,10.12
+9,2020-01-26,Netto,"Bread, biscuit, tomato",0.69+0.99+1.39,3.07
+10,2020-01-27,Netto,Pizza,0.79,0.79
+11,2020-01-28,dm,loreal men expert facewash,4.95,4.95
+12,2020-01-29,Netto,"bread, onion, yogurt",0.69+0.49+0.69,1.87
+13,2019-12-26,Subway,Fish one foot sub,6.69,6.69
+14,2020-01-30,Netto,Handwash,0.49,0.49
+15,2020-01-31,Netto,"Eggs, apple juice, dish wash(Shine)",1.55+0.79+0.25+0.75,3.34
+16,2020-02-03,Netto,"Biscuits, oil, bread, 2* khubza, ketchup",0.99+0.99+0.69+0.32+0.79,3.78
+17,2020-02-05,Netto,"Water, tomato, 2*khubza, Curd ",0.19+0.25+1.29+0.32+0.49,2.54
+18,2020-02-06,Netto,"2*khubza, Eggs, bread",0.32+1.55+0.59,2.46
+19,2020-02-07,Netto,"3*khubza, biscuit, pizza",0.48+0.99+0.79,2.26
+20,2020-02-10,Decathlon,"Football, Pump",4.99+3.99,8.98
+21,2020-02-10,Eurogida,"2*brot,  1 kilo leg piece, 1kilo chicken breast",3.18+3.35+4.44,10.97
+22,2020-02-13,Netto,"Bread, biscuits, razor, signal toothpaste, onion, tomato, lime, water",0.69+0.99+1.99+0.75+0.69+1.09+0.45+0.25+0.19+0.25,7.34
+23,2020-02-15,Netto,"Bread, strawberry, tuna, cheese  slice, capsicum, pizza, yougurt, yogurt flavour",0.69+1.80+1.19+0.99+1.39+0.79+0.35+0.49,7.69
+24,2020-02-22,Netto,"Apple juice, biscuit, pizza, banana, curd, sugar, tomato",0.79+0.25+0.99+0.79+1+0.49+0.35+1.79-0.27,6.18
+25,2020-02-28,Netto,"Pizza, icecream, bread, cheese, tuna, 3Xkhubza",0.79+1.49+0.69+0.99+1.19+0.48,5.63
+26,2020-03-02,Eurogida,"chicken breast+leg, roti",3.40+1.79,5.19
+27,2020-03-02,Netto,"lemon juice, pizza, flavour yogurt, biscuits",0.39+0.25+0.79+0.35-0.04+0.99,2.73
+28,2020-03-03,Netto,"Onion, head and shoulder, handwash",0.69+4.99+0.49,6.17
+29,2020-03-04,Netto,"Bread, ketchup, fries, eggs",0.69+0.79+0.99+1.55,4.02
+30,2020-03-07,Netto,"Pizza, Pizza, oil, tomato",0.79+0.79+0.99+1.19,3.76
+31,2020-03-09,Eurogida,"2 kila leg piece, 500gm keema, paratha, roti",5.96+1.93+1.79+0.69,10.37
+32,2020-03-16,Eurogida,"2 kilo leg piece, 1 kilo keema, paratha, long brothe, 4 piece broth, onion",6.95+3.19+1.29+1.79+1.39+0.99,15.6
+33,2020-03-20,Netto,"fries, pizza, rice, bisuit, yogurt, curd, water(small), oil, water(big)",0.99+0.79+0.59+0.99+0.35+0.49+0.11+0.25+0.99+0.19+0.25,5.99
+34,2020-03-26,Netto,"Pizza, bread, bread, wraps, signal toothbrush",0.79+0.69+0.69+0.99+0.75,3.91
+35,2020-03-31,Netto,"water x6, pizza, biscuits, ketchup, tuna x2, chocolate pudding, bread, eggs",1.14+1.50+0.79+0.99+0.79+1.19+1.19+0.35+0.69+1.55,10.18
+36,2020-04-07,Netto,"Mayonaise, Pizza, Bread, Bodywash, tomato, freis, Onion, WATER DISPOSLE x10",0.79+0.79+0.69+0.55+1.29+0.99+0.69-2.50,3.29
+37,2020-04-09,Netto,"eggs, biscuits, coke, mozarella, pasta spiral, spaghetti x2, bread",1.55+0.99+0.95+0.25+1.40+0.99+0.45+0.45+0.69,7.72
+38,2020-04-14,Netto,"water x6, crossoint, ketchup, spaghetti x2, shaving cream",1.14+1.50+1.49+0.79+0.45+0.45+0.85,6.67
+39,2020-04-22,Netto,"Big bread, pizza X2, freis, aluu, bread X2, wraps, tomato, banana X2, coke, oil, spaghetti X2, rice, basmati rice, pasata sauce X2, werder sauce X2, mayonaise, tuna X2, ketchup, curd, biscuits, orangejuice, sugar, eggs",0.99+0.79+0.79+0.99+1.69+0.69+0.69+0.99+1.29+0.49+0.85+1.09+0.25+0.99+0.45+0.45+0.59+0.99+0.39+0.39+1.59+0.79+1.19+1.19+0.79+0.49+0.99+1.19+0.29+1.55,25.9
+40,2020-05-09,Netto,"onion, banana, fladen-brot X2, pizza X2, body wash, zwiebeln, biscuits, fries, signal toothbrush, kuhne warsauce, water, spaghetti sauce X2()800gm, spaghetti X3, bread, cocacola, olives, tuna fish oil, ketchup, handwash lovena, tomato, eggs, yogurt, rice, WATERBOTTLE DISPOSAL  x2(6 BOTTLES, 8 BOTTLES)",1.69+0.9+0.99+0.99+0.79+0.79+1.20+0.75+0.99+0.99+0.75+0.89+0.19+0.25+0.89+0.89+0.45+0.45+0.45+0.69+1.09+0.25+0.79+1.19+0.79+0.49+1.19+1.55+0.49+0.59-1.50-2.00,24.40-1.50-2=20.9
+41,2020-05-17,Netto,"Water *6, Pizza*6, fries, Wraps *2, Fusilli macaroni, banana 0.828kg, dishwash soap, olives *2, coke, tuna, chlli suace, peeled tomato",1.14+1.50+0.79+0.79+0.99+0.99+0.99+0.45+1.40+0.75+0.79+0.79+1.09+0.25+1.19+0.89+0.39,15.18
+42,2020-05-25,Netto,"Potato, cocacola 1.25l, biscuits, cocacola 0.33l, tomato, onion, fries, cake, pizzaX2, tomato paste, tuna, rice, wraps, olives X2, chilli sauce",1.69+0.99+0.25+0.99+0.50+0.25+1.19+0.85+0.99+2.79+0.79+0.79+0.39+1.19+0.69+0.99+0.79+0.79+0.89,17.8
+43,2020-06-06,Eurogida,"banana, 1kilo Keema, 0.5kilo chicken wings, 2kilo leg piece, baklawa, 3*fladenbrot, brot(paratha), plastic bag",1+3.73+1.71+6.29+4.19+2.07+1.79+0.20,20.98
+44,2020-06-06,Paper-la-papp,"2 pen, 1 scale, 1 maths register, 2 english register",0.89+0.89+0.69+0.85+1.70,5.02
+45,2020-07-10,Eurogida,"Roti *4, chicken wings 500gm, keema 1 kilo, chicken legs 2 kilo ",2.76+1.74+3.60+5.18,13.28
+46,2020-07-13,Netto,"Pizza, tuna, bread, tomato *500gm, biscuits, ketchup, curd, olives, handwash, signal brush, tomato paste *2, onion, eggs, cocacola",0.77+1.16+0.66+0.96+0.96+0.65+0.47+0.77+0.63+1.21+0.37+0.37+1.26+1.52+1.05+0.25,13.06
+47,2020-07-17,Netto,"Pizza, Pizza, coca cola, fries, water X6, BOTTLE DISPOSAL (18 BOTLLES)",0.77+0.77+1.05+0.25+0.77+1.08+1.50-4.50,1.69
+48,2020-07-22,Netto,"brot, coca cola, tomato puree X3, tomato chilli sauce, water X6",0.99+1.05+0.25+0.37+0.37+0.37+0.77+1.08+1.50,6.75+
+49,2020-07-25,Netto,"cocacola, tuna, oil, tomato pasta, wraps, onion, tomato, mini romania(salad), lemon, Cucumber",1.05+0.25+1.16+0.97+0.37+0.77+0.96+1.15+0.95+0.77+1.21+0.68,10.29+
+50,2020-07-29,Netto,"pizza, pizza, yogurt, tuna, tomato pasta, spaghetti, wraps, cucuber 1 stick",0.77+0.77+0.43+1.16+0.37+0.47+0.96+0.55,5.48
+51,2020-07-31,Netto,Coco cola 0.3 l,0.48+0.25,0.73
+52,2020-08-03,IKEA,"Inner pillow, Annons Top/Deck Cookware X2, plastic bag",3.89+11.70+0.49,16.08
+53,2020-08-03,Eurogida,"Roti *4(0.69*4), keema 1 kilo,  chicken wings 500gm,  chicken legs 2 kilo, tomato 1.57 kg,  pepsi can",2.76+3.57+1.45+5.19+2.03+0.49+0.25,15.74
+54,2020-08-05,Netto,"Cocacola, water small, lemon, eggs, olives, cucumber, biscuits, tomato paste X2, Washing clothes Pods",1.05+0.25+0.10+0.25+1.21+1.52+0.77+0.55+0.96+0.37+0.37+3.36,10.76
+55,2020-08-06,Washing Machine,"Monese, then monyx app",2.5+2.5+2,7
+56,2020-08-06,Recharge,Vodafone recharge,15,15
+57,2020-08-10,netto,"Garnier facewash, soap, handwash",3.99+0.49+0.63,5.11
+58,2020-08-14,Netto,"bread, eggs, cocacola, salad, tomato, lemon, onion, gurken, curd, ice cream strawberry, butter sonja, butter frische small",0.66+1.52+1.05+0.25+0.76+1.06+1.21+0.97+0.55+0.47+1.85+0.38+0.08,10.81
+59,2020-08-17,Netto,"tomato puree X2, ice cream chocolate, potato, cocacola, wraps, water bottleX6",0.37+0.37+1.56+1.42+1.05+0.25+0.96+1.08+1.50-1.75,8.56-1.75=6.81
+60,2020-08-22,Netto,"wraps, salt, yogurt, shine, icecream, eggs, bread",0.96+0.18+0.47+0.72+1.56+1.52+0.66,6.07
+61,2020-08-25,Netto,"6 khubza, 4 kaiserbrotchen, banana, milk small, yogurt, tuna, pasata, gurke, berliner ballen sweets, harry donuts",0.37+0.47+1.71+0.51+0.47+1.16+0.37+0.69+0.53+0.53,6.81
+62,2020-08-26,Netto,"Khubza, beriner ballen, head and shoulder",0.38+0.53+3.83,4.74
+63,2020-08-29,Netto,"Milk, khubza",0.76+0.37,1.13
+64,2020-08-29,Eurogida,,,
+65,2020-09-03,Netto,"milkX2, pasataX2, curd, banana, potato, khubza, bread, spaghetti, gurke, salad, ketchup, eggs, berliner ballenX2",0.76+0.76+0.37+0.37+0.47+1.89+0.96+0.37+0.66+0.47+0.65+0.76+0.76+1.52+1.06,11.83
+66,2020-09-10,Netto,"pizza, pizza, curd, cocacola, lemon, berliner ballen, kinder chocolate",0.77+0.77+0.47+1.05+0.25+1.17+0.53+0.38,5.39
+67,2020-09-12,Netto,"2.5 kg potato, mayonaise, bread, 3 donuts, waterX6",0.96+0.76+0.66+1.59+1.08,6.55
+68,2020-09-16,Netto,"Eggs, cocacola, bread, biscuits, onion, donutX2",1.52+1.05+0.25+0.66+0.96+0.58+0.53+0.53,6.08
+69,2020-09-18,Netto,"Bread, handwash, khubza, cocacola, bodywash",0.66+1.21+0.37+1.05+0.25+0.53,4.07
+70,2020-09-24,Netto,"Bread, khubza, khubza, ketchup, garlic sauce, cocacola, yogurt, egg",0.66+0.37+0.37+0.76+1.26+1.05+0.25+0.47+1.52,6.71
+71,2020-09-22,Netto,"bread, pizza, eggs",0.66+0.77+1.52,2.95
+72,2020-09-26,Netto,"penne pasata, spaghetti, tomato tube",0.47+0.47+0.47,1.41
+73,2020-09-29,Netto,"potato, banana, tomato paste, yogurt, donuts X2, signal toothbrush, khubza,bread",1.21+1.84+0.37+0.43+0.53+0.53+1.16+0.37+0.66,7.1
+74,2020-09-30,Netto,"cheese slice, tuna",0.96+1.15,2.11
+75,2020-10-02,Netto,"water bottle X6, khubza, bread, cocacola, eggs, water bottle disposal X12",1.08+1.50+0.37+0.66+0.86+0.25+1.52 - 3.00,6.24-3.00=3.24
+76,2020-10-05,DM,men expert loreal charcoal facwash,4.65,4.65
+77,2020-10-05,Eurogida,"2 kilo leg piece, 1 kilo chicken wings, 1 kilo keema, small roti, 3 big roti, windmill sambal oelek - harisa, pepsi can",5.32+4.08+2.95+0.69+3.30+1.19+0.49+0.25,18.27
+78,2020-10-07,Netto,"Bread, oil, eggs, handwash, mayonaise, cheese slice, cocacola",0.66+0.96+1.52+0.63+0.76+0.96+1.26+0.25,7
+79,2020-10-12,Netto,"2 harry donuts, tomato puree, ketchup, strawberry jam, shine Form, bread, pizza, eggs X2 crate",1.06+0.37+0.76+0.86+0.96+0.66+0.77+1.52+1.52,8.48
+80,2020-10-17,Netto,"cocacola, big bread, khubza, lemon, apple, BOTTLE DISPOSAL x 9",1.26+0.25+0.86+0.37+1.26+1.50-2.25,5.5-2.25=3.25
+81,2020-10-22,Netto,"bread big, basmati rice, rice",0.86+0.97+0.66,2.49
+82,2020-10-22,Netto,"pepsi, pizza margerita small, donut, pesto genovese, kinder",0.44+0.25+0.77+0.47+0.96+0.60,3.49
+83,2020-10-27,Netto,"bread, eggs, rice, bodywash X3, tomato paste, cheese slice, curd, strawberry yogurt, gurke, condense milk, mayonaisse, tuna",0.66+1.52+0.66+2.22+0.37+0.96+0.47+0.43+0.97+0.57+0.76+1.15,10.74
