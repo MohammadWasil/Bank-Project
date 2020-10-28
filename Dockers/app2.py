@@ -15,6 +15,19 @@ collection_customer_transaction = client.Bank.CustomerTransactions
 def welcome():
     return render_template('index.html')
 
+
+# Go to the register page
+@app.route('/register_here_page')
+def register_here_page():
+    return render_template( 'register_page.html')
+    
+@app.route('/register_username', methods = ["GET"])
+def register_users():
+    username = request.form["username_reg"]
+    password = request.form["password_reg"]
+    
+    return username, password
+
 # transaction_hisory_page
 @app.route('/transaction_history', methods=["GET"])
 def transaction_history():
@@ -23,6 +36,8 @@ def transaction_history():
         return render_template('transaction_history.html', documents=row)
     except Exception as e:
         return "Error 404" + str(e)
+    
+
 
 
 
