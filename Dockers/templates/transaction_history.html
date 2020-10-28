@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>WaFa Bank Co.</title>
+
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/styles.css') }}">   <!-- for css styling -->
+
+</head>
+
+<body>
+
+<p>Your transaction history is below: </p> 
+
+<table>
+
+<tr>
+    <th>S. No</th>
+    <th>Date</th>
+    <th>Place</th>
+	<th>Item</th>
+    <th>Amount</th>
+	<th>Total</th>
+</tr>
+
+{% block body %}
+	{% for doc in documents %}
+		<tr>			
+			<td>{{doc["SNo"]}}</td>
+			<td>{{doc["Date"]}}</td>
+			<td>{{doc["Place"]}}</td>
+			<td>{{doc["Item"]}}</td>
+			<td>{{doc["Amount"]}}</td>
+			<td>{{doc["Total"]}}</td>
+
+		</tr>
+	{% endfor %}
+{% endblock  %}
+ 
+</table>
+
+
+</body>
+
+</html>
