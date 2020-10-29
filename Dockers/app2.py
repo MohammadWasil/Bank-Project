@@ -4,29 +4,54 @@ import pickle
 from flask import render_template
 from pymongo import MongoClient 
 
-
 app = Flask(__name__)
 
 # Creating a connection with the MongoDB database
 client = MongoClient("mongodb://localhost:27017/") 
-collection_customer_transaction = client.Bank.CustomerTransactions
+collection_customer_transaction = client.Bank.CustomerTransactions   # collection/table of customer transaction
+collection_username = client.Bank.Usernames              # collection/table of customer transaction
 
 @app.route('/')
 def welcome():
     return render_template('index.html')
-
 
 # Go to the register page
 @app.route('/register_here_page')
 def register_here_page():
     return render_template( 'register_page.html')
     
-@app.route('/register_username', methods = ["GET"])
+@app.route('/register_username', methods = ["POST"])
 def register_users():
-    username = request.form["username_reg"]
-    password = request.form["password_reg"]
+
+    first_name_reg = request.form["first_name_reg"]
+    last_name_reg = request.form["last_name_reg"]
+    username_reg = request.form["username_reg"]
+    password_reg = request.form["password_reg"]
     
-    return username, password
+    document = { "first name" : first_name_reg, "last name" : last_name_reg, 
+                "username" : username_reg, "password" : password_reg}
+    
+    collection_username.insert_one(document)
+    
+    return render_template('register_page.html', registered = True)
+
+@app.route('/login_sucess', methods = ["POST"])
+def login():
+    username = request.form["username"]
+    password = request.form["password"]
+    
+    # Check if the user login and password are correct or not.
+    query_username = { "username" : username}
+    your_username = collection_username.find(query_username)
+    
+    for record in your_username:    
+        if record["password"] == password:
+            print("password is correct")
+            return render_template('logged_in.html')
+        else:
+            print("The username and password that you entered is wrong!")
+            return render_template("index.html", wrong_info = True)
+    
 
 # transaction_hisory_page
 @app.route('/transaction_history', methods=["GET"])
@@ -37,10 +62,22 @@ def transaction_history():
     except Exception as e:
         return "Error 404" + str(e)
     
+@app.route('/update_transaction', methods=["POST"])
+def update_transaction():
+    SNo = request.form["SNo"]
+    date = request.form["date"]
+    place = request.form["place"]
+    item = request.form["item"]
+    amount = request.form["amount"]
+    total = request.form["total"]
+    
+    document = {"SNo" : SNo, "Date" : date, "Place" : place, "Item" : item, "Amount" : amount, "Total" : total}
 
-
-
-
+    collection_customer_transaction.insert_one(document)
+    
+    return render_template('logged_in.html')
+    
+    
 # Using html syntax
 #@app.route("/form", methods=["GET"])
 #def get_form():

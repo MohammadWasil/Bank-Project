@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>WaFa Bank Co.</title>
+</head>
+
+<body>
+
+Welcome to your account : NAME OF THE ACCOUNT HOLDER
+
+
+<p>To add more transacions, fill the form below</p>
+<form action="/update_transaction" method="POST">
+	<label for="SNo">SNo</label> 		<input type="text" id="SNo" name="SNo">
+	
+	<label for="date">Date</label> 		<input type="text" id="date" name="date">
+	
+	<label for="place">Place</label>	<input type="text" id="place" name="place">
+	
+	<label for="item">Item</label>		<input type="text" id="item" name="item"> 
+	
+	<label for="amount">Amount</label>	<input type="text" id="amount" name="amount">
+	
+	<label for="total">Total</label>	<input type="text" id="total" name="total"> 
+	
+	<input type="submit" value="submit">
+</form>
+
+<p>Your transaction history: </p> <a href="transaction_history">link</a>
+
+
+</body>

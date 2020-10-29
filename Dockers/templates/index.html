@@ -41,20 +41,25 @@
 
 <p>Login:</p>
 
-<form action="">
+<form action="/login_sucess", method="POST">
 	<label for="username">Username</p>
 	<input type="text" id="username" name="username"> <br><br>
+
 	<label for="password">Password</p>
-	<input type="text" id="password" name="password"> <br><br>
+	<input type="password" id="password" name="password"> <br><br>
+
 	<input type="submit" value="submit">
 </form>
+
+{% block body %}
+	{% if wrong_info == True %}
+		<p> The username/password you enter is not correct. Try enetering the correct details</p>
+	{% endif %}
+{% endblock %}
 
 <p>forgot password?</p>
 
 <p>Didnt register? Sign in <a href="register_here_page">here</a></p>
-
-
-<p>Your transaction history: </p> <a href="transaction_history">link</a>
 
 
 

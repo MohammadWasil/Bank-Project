@@ -10,18 +10,27 @@
 
 <h1>Welcome to the WaFa Bank Co.</h1>
 
-<p>Add your data</p>
+<p>Type in your username and password as you like</p>
 
-<form method="GET">
-	<label for="username_reg">Username</p>
-	<input type="text" id="username_reg" name="username_reg"> <br><br>
-	<label for="password_reg">Password</p>
-	<input type="text" id="password_reg" name="password_reg"> <br><br>
+<form action = "/register_username" method="POST">
+			
+	<label for="first_name_reg">First Name</label>  <input type="text" id="first_name_reg" name="first_name_reg"> <br><br>
+	
+	<label for="last_name_reg">Last Name</label>	<input type="text" id="last_name_reg" name="last_name_reg"> <br><br>
+	
+	<label for="username_reg">Username</label>		<input type="text" id="username_reg" name="username_reg"> <br><br>
+	
+	<label for="password_reg">Password</label>		<input type="password" id="password_reg" name="password_reg"> <br><br>
+	
 	<input type="submit" value="Sign in">
 </form>
 
-
-
+{% block body %}
+	{% if registered == True %}
+		<p> You have successfully signed in. </p>
+		<p> Now, go <a href='/'>back</a> and log in to your account </p>
+	{% endif %}
+{% endblock %}
 
 </body>
 

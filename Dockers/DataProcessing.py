@@ -46,7 +46,3 @@ with open(csv_file, encoding='utf-8') as csvf:
             row[field]=each[field]
         # push the data into database.            
         database.CustomerTransactions.insert_one(row)
-
-
-
-

@@ -37,6 +37,7 @@ def predict_note_file():
 @app.route("/form", methods=["GET"])
 def get_form():
     return render_template('index.html')
+
 @app.route('/predict_html', methods=["POST"])
 def predict_html():
     variance = request.form.get('variance')
