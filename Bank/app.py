@@ -1,7 +1,6 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import pandas as pd
 import pickle
-from flask import render_template
 from pymongo import MongoClient 
 
 app = Flask(__name__)
