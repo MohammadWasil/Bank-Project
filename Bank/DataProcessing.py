@@ -10,7 +10,7 @@ import csv
 
 # Creating a client 
 client = MongoClient("mongodb://localhost:27017/") 
-client_atlas = MongoClient("mongodb+srv://bank:bank@bank-analytics.jrwtb.mongodb.net/bank?retryWrites=true&w=majority") 
+client_atlas = MongoClient("MONGO_CONNECTION_STRING") 
 
   
 # Creating a database name "database" 
