@@ -52,9 +52,42 @@
 	<input type="submit" value="submit">
 </form>
 
+
+<script>
+	// Convert html form to json objects.
+	var json_object = {};
+	formData.forEach(function(value, key){
+		object[key] = value;
+	}) ;
+	var json = JSON.stringify(object) ;
+
+</script>
+<!--
+<script>
+	$(document).ready( function() {
+   $('#submit').click(function() {
+	  var formdata = serialize();
+	  $.ajax({
+			type: 'POST',
+		   contentType: 'application/json',
+		   data: JSON.stringify(formdata),
+		   dataType: 'json',
+		   url: '/login_sucess',
+		   //success: function (e) {
+		   //  console.log(e);
+		   //  window.location = "http://192.168.57.223:5000/login_sucess";
+		   //},
+		   error: function(error) {
+		   console.log(error);
+	   }
+	   });
+   });
+});
+</script>
+-->
 {% block body %}
 	{% if wrong_info == True %}
-		<p> The username/password you enter is not correct. Try enetering the correct details</p>
+		<p> The username/password you enter is not correct. Try entering the correct details</p>
 	{% endif %}
 {% endblock %}
 

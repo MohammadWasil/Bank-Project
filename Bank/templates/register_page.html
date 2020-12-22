@@ -25,6 +25,16 @@
 	<input type="submit" value="Sign in">
 </form>
 
+<script>
+	// Convert html form to json objects.
+	var json_object = {};
+	formData.forEach(function(value, key){
+		object[key] = value;
+	}) ;
+	var json = JSON.stringify(object) ;
+	console.log(json);
+</script>
+
 {% block body %}
 	{% if registered == True %}
 		<p> You have successfully signed in. </p>
