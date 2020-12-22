@@ -65,7 +65,6 @@ def login():
                 return render_template("index.html", wrong_info = True)
     except Exception as error:
         return jsonify({"Error " : str(error)})
-    
 
 # transaction_hisory_page
 @app.route('/transaction_history', methods=["GET"])

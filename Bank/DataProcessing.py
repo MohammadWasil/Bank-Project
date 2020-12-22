@@ -10,11 +10,12 @@ import csv
 
 # Creating a client 
 client = MongoClient("mongodb://localhost:27017/") 
-client_atlas = MongoClient("MONGO_CONNECTION_STRING") 
+#client_atlas = MongoClient("MONGO_CONNECTION_STRING") 
 
   
 # Creating a database name "database" 
 database = client["Bank"] 
+'''
 print("Database is created !!")
 
 # Creating a collection name "collection" 
@@ -68,3 +69,19 @@ with open(csv_file, encoding='utf-8') as csvf:
         database.CustomerTransactions.insert_one(row)
         database_atlas.CustomerTransactions.insert_one(row)
         
+'''
+
+pipeline = [ { "$set" : { 
+        'SNo' :
+         
+        {
+            '$convert' : { 'input' : '$SNo', 'to' : 'int', 'onError':0},
+        },
+        'Total' : 
+        {
+            '$convert' : { 'input' : '$Total', 'to' : 'double'}
+        }
+    } } ]
+#clear_output()
+print(list(client.Bank.CustomerTransactions.aggregate(pipeline)))
+
