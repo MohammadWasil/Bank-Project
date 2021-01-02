@@ -12,10 +12,9 @@ import csv
 client = MongoClient("mongodb://localhost:27017/") 
 #client_atlas = MongoClient("MONGO_CONNECTION_STRING") 
 
-  
+
 # Creating a database name "database" 
 database = client["Bank"] 
-'''
 print("Database is created !!")
 
 # Creating a collection name "collection" 
@@ -23,12 +22,12 @@ collection = database["CustomerTransactions"]
 print("Collection is created")
 
 # Creating a database name "database" 
-database_atlas = client_atlas["Bank"] 
-print("Database is created !!")
+#database_atlas = client_atlas["Bank"] 
+#print("Database is created !!")
 
 # Creating a collection name "collection" 
-collection_atlas = database_atlas["CustomerTransactions"]
-print("Collection is created")
+#collection_atlas = database_atlas["CustomerTransactions"]
+#print("Collection is created")
 
 # To check if the database is created or not.
 print("Checking for local database:")
@@ -40,14 +39,14 @@ list_of_collection = database.list_collection_names()
 if "CustomerTransaction" in list_of_collection:
     print("database customerTransaction Exists !!")
 
-print("Checking for cloud database:")
-list_of_database = client_atlas.list_database_names() 
-if "Bank" in list_of_database: 
-	print("Database bank Exists !!") 
+#print("Checking for cloud database:")
+#list_of_database = client_atlas.list_database_names() 
+#if "Bank" in list_of_database: 
+#   print("Database bank Exists !!") 
 # To check if the collection is created.
-list_of_collection = database_atlas.list_collection_names()
-if "CustomerTransaction" in list_of_collection:
-    print("database customerTransaction Exists !!")
+#list_of_collection = database_atlas.list_collection_names()
+#if "CustomerTransaction" in list_of_collection:
+#    print("database customerTransaction Exists !!")
 
 
 
@@ -67,21 +66,79 @@ with open(csv_file, encoding='utf-8') as csvf:
             row[field]=each[field]
         # push the data into database.            
         database.CustomerTransactions.insert_one(row)
-        database_atlas.CustomerTransactions.insert_one(row)
-        
-'''
+        #database_atlas.CustomerTransactions.insert_one(row)
 
-pipeline = [ { "$set" : { 
-        'SNo' :
-         
-        {
-            '$convert' : { 'input' : '$SNo', 'to' : 'int', 'onError':0},
-        },
-        'Total' : 
-        {
-            '$convert' : { 'input' : '$Total', 'to' : 'double'}
+
+# Delete the first row.        
+
+#del_query = { 'SNo' : { '$eq' : 'SNo' }}
+#client.Bank.CustomerTransaction.delete_one( del_query)
+
+pipeline = [ 
+    { "$set" : 
+        { 
+            'SNo' :    
+            {
+                '$convert' : { 'input' : '$SNo', 'to' : 'int', 'onError':'SNo'},
+            },
+            'Total' : 
+            {
+                '$convert' : { 'input' : '$Total', 'to' : 'double', 'onError':'Total'}
+            }, 
+            'Item' : 
+            {
+                '$split' : [ "$Item", ", "]
+            },
+            'Amount' : 
+            {   
+                '$split' : [ "$Amount", "+"]
+            }
+            #'Amount' :    
+            #{
+            #    '$convert' : { 'input' : '$Amount', 'to' : 'double', 'onError':0}
+            #}
+            
+            "Amount": 
+            {    
+                '$map':
+                {
+                    'input': "$Amount",
+                    'as': "amount",
+                    'in': 
+                    {
+                        '$convert' : 
+                        {
+                            'input': '$Amount',
+                            'to' : 'double',
+                            'onError': 0
+                        }
+                    }
+                }
+            }
+            
         }
-    } } ]
+    },
+    {
+        '$out' : "CustomerTransactions"
+    } ]
 #clear_output()
-print(list(client.Bank.CustomerTransactions.aggregate(pipeline)))
+client.Bank.CustomerTransactions.aggregate(pipeline)
 
+
+'''
+{
+  "amountConvert": 
+  {
+    '$map' :
+    {
+      input  : 'Amount',
+      as : amount_var,
+      in :  { '$convert' : { 'input' : '$Amount', 
+                          'to' : 'double', 
+                          'onError': 0}
+      }
+    }
+    
+  }
+}
+'''

@@ -42,7 +42,6 @@ def register_users():
 
 @app.route('/login_sucess', methods = ["POST"])
 def login():
-    
     try:
         user_login_credentials = json.loads(json.dumps(request.form))
         username = user_login_credentials["username"]
@@ -59,7 +58,8 @@ def login():
         for record in your_username:    
             if record["password"] == password:
                 print("password is correct")
-                return render_template('logged_in.html')
+                customer_name = record["first name"] + " " + record["last name"]
+                return render_template('logged_in.html', data = customer_name)
             else:
                 print("The username and password that you entered is wrong!")
                 return render_template("index.html", wrong_info = True)
