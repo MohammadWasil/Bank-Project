@@ -92,12 +92,23 @@ pipeline = [
             'Amount' : 
             {   
                 '$split' : [ "$Amount", "+"]
-            }
+            },
             #'Amount' :    
             #{
             #    '$convert' : { 'input' : '$Amount', 'to' : 'double', 'onError':0}
             #}
             
+                  
+        }
+    },
+    {
+        '$out' : "CustomerTransactions"
+    } ]
+
+# convert each of the elemets of array Amount to datatype double.
+pipeline2 = [ 
+    { "$set" : 
+        { 
             "Amount": 
             {    
                 '$map':
@@ -107,38 +118,66 @@ pipeline = [
                     'in': 
                     {
                         '$convert' : 
-                        {
-                            'input': '$Amount',
-                            'to' : 'double',
-                            'onError': 0
-                        }
+                            {
+                                'input': '$$amount',
+                                'to' : 'double',
+                                'onError': 0
+                            }
                     }
                 }
-            }
-            
+            }      
         }
     },
     {
         '$out' : "CustomerTransactions"
     } ]
-#clear_output()
-client.Bank.CustomerTransactions.aggregate(pipeline)
 
-
-'''
-{
-  "amountConvert": 
-  {
-    '$map' :
+pipelinePlasticBottle = [
+    #{
+    #    "$limit" : 10,
+    #},
     {
-      input  : 'Amount',
-      as : amount_var,
-      in :  { '$convert' : { 'input' : '$Amount', 
-                          'to' : 'double', 
-                          'onError': 0}
-      }
+        "$set" : 
+        {
+            "Amount" : 
+            {
+                "$cond": 
+                {
+                # If the number of items and size of AMount array are different, then definately there is some problem.
+                "if": { "$ne" :[ {"$size": "$Item"}, {"$size":"$Amount"}]    },
+                "then":  
+                    {
+                    "$cond" : 
+                            {
+                                # Check if apple juice is in the item
+                                "if" : { "$in" :[ "apple juice", "$Item" ] },
+                                "then" : 
+                                { 
+                                    # Add the value of 0.25 to the original price of the apple juice.
+                                    "$let":
+                                        {
+                                        "vars": { "appleJuiceIndex": { "$indexOfArray": [ "$Item", "apple juice" ]} },
+                                        "in": { "$add" : [{"$arrayElemAt": ["$Amount", "$$appleJuiceIndex" ]}, 
+                                                {"$arrayElemAt": ["$Amount", { "$add": ["$$appleJuiceIndex", 1]  } ]}]      }
+                                        }
+                                        # Update the array
+                                        # ...
+                                        # ...
+
+                                },
+                                "else" : "$Amount",
+                            }
+                        },
+                "else": "$Amount",
+                }
+            }
+        }
+    },
+    {
+        '$out' : "CustomerTransactions"
     }
-    
-  }
-}
-'''
+]
+
+client.Bank.CustomerTransactions.aggregate(pipeline)
+client.Bank.CustomerTransactions.aggregate(pipeline2)
+client.Bank.CustomerTransactions.aggregate(pipelinePlasticBottle)
